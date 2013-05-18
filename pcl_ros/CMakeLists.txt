@@ -24,7 +24,7 @@ gencfg ()
 
 # ---[ Point Cloud Library - Transforms
 rosbuild_add_library (pcl_ros_tf src/pcl_ros/transforms.cpp)
-rosbuild_add_compile_flags (pcl_ros_tf ${SSE_FLAGS})
+#rosbuild_add_compile_flags (pcl_ros_tf ${SSE_FLAGS})
 
 # ---[ Point Cloud Library - IO
 rosbuild_add_library (pcl_ros_io
@@ -34,7 +34,7 @@ rosbuild_add_library (pcl_ros_io
                       src/pcl_ros/io/pcd_io.cpp
                       src/pcl_ros/io/bag_io.cpp
                      )
-rosbuild_add_compile_flags (pcl_ros_io ${SSE_FLAGS})
+#rosbuild_add_compile_flags (pcl_ros_io ${SSE_FLAGS})
 rosbuild_link_boost (pcl_ros_io system)
 target_link_libraries (pcl_ros_io pcl_ros_tf)
 
@@ -74,7 +74,7 @@ rosbuild_add_library (pcl_ros_filters
                       src/pcl_ros/filters/statistical_outlier_removal.cpp
                       src/pcl_ros/filters/voxel_grid.cpp
                      )
-rosbuild_add_compile_flags (pcl_ros_filters ${SSE_FLAGS})
+#rosbuild_add_compile_flags (pcl_ros_filters ${SSE_FLAGS})
 target_link_libraries (pcl_ros_filters pcl_ros_tf)
 
 ## ---[ Point Cloud Library - Segmentation
